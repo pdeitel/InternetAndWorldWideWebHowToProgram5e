@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- Fig. 14.15: alpha.html -->
+<!-- Using the globalAlpha attribute on a canvas. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Alpha Transparency</title>
+   </head>
+   <body>
+   
+      <!-- 0.9 alpha value -->
+      <canvas id = "alpha" width = "200" height = "200" 
+         style = "border: 1px solid black;">
+      </canvas>
+      <script>
+         var canvas = document.getElementById("alpha");
+         var context = canvas.getContext("2d")
+         context.beginPath();
+         context.rect(10, 10, 120, 120);
+         context.fillStyle = "purple";
+         context.fill();
+         context.globalAlpha = 0.9; 
+         context.beginPath();
+         context.arc(120, 120, 65, 0, 2 * Math.PI, false);
+         context.fillStyle = "lime";
+         context.fill();
+      </script>
+
+      <!-- 0.5 alpha value -->
+      <canvas id = "alpha2" width = "200" height = "200" 
+         style = "border: 1px solid black;">
+      </canvas>
+      <script>
+         var canvas = document.getElementById("alpha2");
+         var context = canvas.getContext("2d")
+         context.beginPath();
+         context.rect(10, 10, 120, 120);
+         context.fillStyle = "purple";
+         context.fill();
+         context.globalAlpha = 0.5; 
+         context.beginPath();
+         context.arc(120, 120, 65, 0, 2 * Math.PI, false);
+         context.fillStyle = "lime";
+         context.fill();
+      </script>
+
+      <!-- 0.15 alpha value -->
+      <canvas id = "alpha3" width = "200" height = "200" 
+         style = "border: 1px solid black;">
+      </canvas>
+      <script>
+         var canvas = document.getElementById("alpha3");
+         var context = canvas.getContext("2d")
+         context.beginPath();
+         context.rect(10, 10, 120, 120);
+         context.fillStyle = "purple";
+         context.fill();
+         context.globalAlpha = 0.15; 
+         context.beginPath();
+         context.arc(120, 120, 65, 0, 2 * Math.PI, false);
+         context.fillStyle = "lime";
+         context.fill();
+      </script>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

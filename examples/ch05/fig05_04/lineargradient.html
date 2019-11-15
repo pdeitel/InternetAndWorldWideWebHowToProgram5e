@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.4: lineargradient.html -->
+<!-- Linear gradients in CSS3. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Linear Gradient</title>
+      <style type = "text/css">
+      div
+      {
+         width: 200px;
+         height: 200px;
+         border: 3px solid navy;
+         padding: 5px 20px; 
+         text-align: center;
+         background: -webkit-gradient(
+            linear, center top, center bottom,
+            color-stop(15%, White), color-stop(50%, lightsteelblue),
+            color-stop(75%, navy) );
+         background: -moz-linear-gradient(
+            top center, white 15%, lightsteelblue 50%, navy 75% );
+         background: linear-gradient(
+            top, White 15%, lightsteelblue 50%, navy 75% );
+         float: left;
+         margin-right: 15px;
+      }
+      #horizontal
+      {
+         width: 200px;
+         height: 200px;
+         border: 3px solid orange;
+         padding: 5px 20px; 
+         text-align: center;
+         background: -webkit-gradient(
+            linear, left top, right top,
+            color-stop(15%, white), color-stop(50%, yellow),
+            color-stop(75%, orange) );
+         background: -moz-linear-gradient(
+            left, white 15%, yellow 50%, orange 75% );
+         background: linear-gradient(
+            left, white 15%, yellow 50%, orange 75% );
+            margin-right: 15px;
+      }
+      #diagonal
+      {
+         width: 200px;
+         height: 200px;
+         border: 3px solid purple;
+         padding: 5px 20px; 
+         text-align: center;
+         background: -webkit-gradient(
+            linear, left top, right bottom,
+            color-stop(15%, white), color-stop(50%, plum),
+            color-stop(75%, purple) );
+         background: -moz-linear-gradient(
+            top left, white 15%, plum 50%, purple 75% );
+         background: linear-gradient(
+            135deg, white 15%, plum 50%, purple 75% );
+      }
+      </style>
+   </head>
+   <body>
+      <div><h2>Vertical Linear Gradient</h2></div>
+      <div id = "horizontal"><h2>Horizontal Linear Gradient</h2></div>
+      <div id = "diagonal"><h2>Diagonal Linear Gradient</h2></div>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

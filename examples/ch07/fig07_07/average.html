@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!-- Fig. 7.7: average.html -->
+<!-- Counter-controlled repetition to calculate a class average. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Class Average Program</title>  
+      <script>
+
+         var total; // sum of grades
+         var gradeCounter; // number of grades entered
+         var grade; // grade typed by user (as a string)
+         var gradeValue; // grade value (converted to intetger)
+         var average; // average of all grades
+  
+         // Initialization Phase
+         total = 0; // clear total
+         gradeCounter = 1; // prepare to loop
+   
+         // Processing Phase
+         while ( gradeCounter <= 10 ) // loop 10 times
+         {
+
+            // prompt for input and read grade from user
+            grade = window.prompt( "Enter integer grade:", "0" );
+
+            // convert grade from a string to an integer
+            gradeValue = parseInt( grade );
+
+            // add gradeValue to total
+            total = total + gradeValue;  
+
+            // add 1 to gradeCounter
+            gradeCounter = gradeCounter + 1;
+         } // end while
+   
+         // Termination Phase
+         average = total / 10;   // calculate the average
+
+         // display average of exam grades
+         document.writeln( 
+            "<h1>Class average is " + average + "</h1>" );
+
+      </script>
+   </head><body></body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

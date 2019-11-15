@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.11: animation.html -->
+<!-- Animation in CSS3. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Animation</title>
+      <style type = "text/css">
+         img
+         {
+            position: relative;
+            -webkit-animation: movingimage linear 10s 1s 2 alternate;
+            -moz-animation: movingimage linear 10s 1s 2 alternate;
+            animation: movingimage linear 10s 1s 2 alternate;
+         }
+         @-webkit-keyframes movingimage 
+         {
+            0%   {opacity: 0; left: 50px; top: 0px;}
+            25%  {opacity: 1; left: 0px; top: 50px;}
+            50%  {opacity: 0; left: 50px; top: 100px;}
+            75%  {opacity: 1; left: 100px; top: 50px;}
+            100% {opacity: 0; left: 50px; top: 0px;}
+         }
+         @-moz-keyframes movingimage 
+         {
+            0%   {opacity: 0; left: 50px; top: 0px;}
+            25%  {opacity: 1; left: 0px; top: 50px;}
+            50%  {opacity: 0; left: 50px; top: 100px;}
+            75%  {opacity: 1; left: 100px; top: 50px;}
+            100% {opacity: 0; left: 50px; top: 0px;}
+         }
+         @keyframes movingimage
+         {
+            0%   {opacity: 0; left: 50px; top: 0px;}
+            25%  {opacity: 1; left: 0px; top: 50px;}
+            50%  {opacity: 0; left: 50px; top: 100px;}
+            75%  {opacity: 1; left: 100px; top: 50px;}
+            100% {opacity: 0; left: 50px; top: 0px;}
+         }
+      </style>
+   </head>
+   <body>
+      <img src = "jhtp.png" width = "138" height = "180"
+         alt = "Java How to Program book cover">
+      <div></div>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<!-- Fig. 3.18: sectionelements.html -->
+<!-- New HTML5 section elements. -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>New HTML5 Section Elements</title>
+   </head>
+
+   <body>
+      <header> <!-- header element creates a header for the page -->
+         <img src = "deitellogo.png" alt = "Deitel logo" />
+         <h1>Welcome to the Deitel Buzz Online<h1>
+
+         <!-- time element inserts a date and/or time -->
+         <time>2012-01-17</time> 
+
+      </header>
+ 
+      <section id = "1"> <!-- Begin section 1 -->
+         <nav> <!-- nav element groups navigation links  -->
+            <h2> Recent Publications</h2>
+            <ul>
+               <li><a href = "http://www.deitel.com/books/iw3htp5">
+                  Internet & World Wide Web How to Program, 5/e</a></li>
+               <li><a href = "http://www.deitel.com/books/androidfp/">
+                  Android for Programmers: An App-Driven Approach</a>
+               </li>
+               <li><a href = "http://www.deitel.com/books/iphonefp">
+                  iPhone for Programmers: An App-Driven Approach</a></li>
+               <li><a href = "http://www.deitel.com/books/jhtp9/">
+                  Java How to Program, 9/e</a></li>
+               <li><a href = "http://www.deitel.com/books/cpphtp8/">
+                  C++ How to Program, 8/e</a></li>
+               <li>
+                  <a href = "http://www.deitel.com/books/vcsharp2010htp">
+                     Visual C# 2010 How to Program, 4/e</a></li>
+               <li><a href = "http://www.deitel.com/books/vb2010htp">
+                  Visual Basic 2010 How to Program</a></li>
+            </ul>
+         </nav> 
+      </section>
+      
+      <section id = "2"> <!-- Begin section 2 -->
+         <h2>How to Program Series Books</h2>
+         <h3><em>Java How to Program, 9/e</em></h3>
+      
+         <figure> <!-- figure element describes the image -->
+            <img src = "jhtp.jpg" alt = "Java How to Program, 9/e" />
+            
+            <!-- figurecaption element inserts a figure caption -->
+            <figcaption><em>Java How to Program, 9/e</em> 
+               cover.</figcaption>
+         </figure>
+
+		   <!--article element represents content from another source -->
+		   <article> 
+			  <header>
+				 <h5>From
+					<em>
+					   <a href = "http://www.deitel.com/books/jhtp9/">
+					   Java How to program, 9/e: </a>
+					</em>
+				 </h5>
+			  </header>
+			  
+			  <p>Features include:
+				 <ul>
+					<li>Rich coverage of fundamentals, including 
+					   <!-- mark element highlights text -->
+					   <mark>two chapters on control statements.</mark></li> 
+					<li>Focus on <mark>real-world examples.</mark></li>
+					<li><mark>Making a Difference exercises set.</mark></li>
+					<li>Early introduction to classes, objects, 
+					   methods and strings.</li>
+					<li>Integrated exception handling.</li>
+					<li>Files, streams and object serialization.</li>
+					<li>Optional modular sections on language and 
+					   library features of the new Java SE 7.</li>
+					<li>Other topics include: Recursion, searching, 
+					   sorting, generic collections, generics, data 
+					   structures, applets, multimedia, 
+					   multithreading, databases/JDBC&trade;, web-app 
+					   development, web services and an optional 
+					   ATM Object-Oriented Design case study.</li>
+				 </ul>
+
+				 <!-- summary element represents a summary for the -->
+				 <!-- content of the details element -->
+				 <details>
+					<summary>Recent Edition Testimonials</summary>
+					<ul>
+					   <li>"Updated to reflect the state of the 
+						  art in Java technologies; its deep and 
+						  crystal clear explanations make it
+						  indispensable. The social-consciousness 
+						  [Making a Difference] exercises are 
+						  something really new and refreshing."
+						  <strong>&mdash;Jos&eacute; Antonio 
+						  Gonz&aacute;lez Seco, Parliament of 
+						  Andalusia</strong></li>
+					   <li>"Gives new programmers the benefit of the 
+						  wisdom derived from many years of software 
+						  development experience."<strong>
+						  &mdash;Edward F. Gehringer, North Carolina 
+						  State University</strong></li>
+					   <li>"Introduces good design practices and 
+						  methodologies right from the beginning. 
+						  An excellent starting point for developing 
+						  high-quality robust Java applications."
+						  <strong>&mdash;Simon Ritter, 
+						  Oracle Corporation</strong></li>
+					   <li>"An easy-to-read conversational style. 
+						  Clear code examples propel readers to 
+						  become proficient in Java."
+						  <strong>&mdash;Patty Kraft, San Diego State 
+						  University</strong></li>   
+					   <li>"A great textbook with a myriad of examples 
+						  from various application domains&mdash;
+						  excellent for a typical CS1 or CS2 course."
+						  <strong>&mdash;William E. Duncan, Louisiana 
+						  State University</strong></li>
+					</ul>
+				 </details>
+			  </p>
+		   </article>
+            
+         <!-- aside element represents content in a sidebar that's -->
+         <!-- related to the content around the element -->
+         <aside> 
+            The aside element is not formatted by the browsers.
+         </aside>
+      
+         <h2>Deitel Developer Series Books</h2>
+         <h3><em>Android for Programmers: An App-Driven Approach
+            </em></h3>
+            Click <a href = "http://www.deitel.com/books/androidfp/"> 
+            here</a> for more information or to order this book.
+
+         <h2>LiveLessons Videos</h2>
+         <h3><em>C# 2010 Fundamentals LiveLessons</em></h3>
+         Click <a href = "http://www.deitel.com/Books/LiveLessons/"> 
+         here</a> for more information about our LiveLessons videos.
+      </section>
+
+      <section id = "3"> <!-- Begin section 3 -->
+         <h2>Results from our Facebook Survey</h2>
+         <p>If you were a nonprogrammer about to learn Java for the first 
+            time, would you prefer a course that taught Java in the 
+            context of Android app development? Here are the results from 
+            our survey:</p>
+            
+            <!-- meter element represents a scale within a range -->
+            0 <meter min = "0"
+            max = "54"
+            value = "14"></meter> 54
+         <p>Of the 54 responders, 14 (green) would prefer to
+         learn Java in the context of Android app development.</p>
+      </section>
+      
+      <!-- footer element represents a footer to a section or page, -->
+      <!-- usually containing information such as author name, -->
+      <!-- copyright, etc. -->
+      <footer>
+         <!-- wbr element indicates the appropriate place to break a -->
+         <!-- word when the text wraps -->
+         <h6>&copy; 1992-2012 by Deitel &amp; Associ<wbr>ates, Inc. 
+            All Rights Reserved.<h6>
+         <!-- address element represents contact information for a -->
+         <!-- document or the nearest body element or article -->
+         <address>
+            Contact us at <a href = "mailto:deitel@deitel.com">
+            deitel@deitel.com</a>
+         </address>
+      </footer>
+   </body>
+</html>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

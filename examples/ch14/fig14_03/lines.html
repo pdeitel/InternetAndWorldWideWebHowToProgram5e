@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- Fig. 14.3: lines.html -->
+<!-- Drawing lines on a canvas. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Drawing Lines</title>
+   </head>
+   <body>
+      <canvas id = "drawLines" width = "400" height = "200" 
+         style = "border: 1px solid Black;">
+      </canvas>
+      <script>
+         var canvas = document.getElementById("drawLines");
+         var context = canvas.getContext("2d")
+        
+         // red lines without a closed path 
+         context.beginPath(); // begin a new path
+         context.moveTo(10, 10); // path origin
+         context.lineTo(390, 10); 
+         context.lineTo(390, 30); 
+         context.lineTo(10, 30); 
+         context.lineWidth = 10; // line width
+         context.lineJoin = "bevel" // line join style
+         context.lineCap = "butt"; // line cap style
+         context.strokeStyle = "red" // line color
+         context.stroke(); //draw path
+
+         // orange lines without a closed path 
+         context.beginPath(); // begin a new path
+         context.moveTo(40, 75); // path origin
+         context.lineTo(40, 55); 
+         context.lineTo(360, 55); 
+         context.lineTo(360, 75); 
+         context.lineWidth = 20; // line width
+         context.lineJoin = "round" // line join style
+         context.lineCap = "round"; // line cap style
+         context.strokeStyle = "orange" // line color
+         context.stroke(); // draw path
+
+         // green lines with a closed path 
+         context.beginPath(); // begin a new path
+         context.moveTo(10, 100); // path origin
+         context.lineTo(390, 100); 
+         context.lineTo(390, 130);
+         context.closePath() // close path
+         context.lineWidth = 10; // line width
+         context.lineJoin = "miter" // line join style
+         context.strokeStyle = "green" // line color
+         context.stroke(); // draw path
+
+         // blue lines without a closed path 
+         context.beginPath(); // begin a new path
+         context.moveTo(40, 140); // path origin
+         context.lineTo(360, 190); 
+         context.lineTo(360, 140);
+         context.lineTo(40, 190);
+         context.lineWidth = 5; // line width
+         context.lineCap = "square"; // line cap style
+         context.strokeStyle = "blue" // line color
+         context.stroke(); // draw path
+      </script>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

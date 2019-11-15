@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- Fig. 14.13: pattern.html -->
+<!-- Creating a pattern using an image on a canvas. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Patterns</title>
+      <script>
+         var image = new Image();
+         image.src = "yellowflowers.png";
+
+         function start()
+         {
+            var canvas = document.getElementById("pattern");
+            var context = canvas.getContext("2d");
+            var pattern = context.createPattern(image, "repeat");
+            context.rect(5, 5, 385, 200);
+            context.fillStyle = pattern;
+            context.fill();
+         } // end function start
+
+         window.addEventListener( "load", start, false );
+      </script>
+   </head>
+   <body>
+      <canvas id = "pattern" width = "395" height = "210" 
+         style = "border: 1px solid black;">
+      </canvas>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

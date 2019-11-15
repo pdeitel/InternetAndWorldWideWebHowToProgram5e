@@ -1,0 +1,17 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/</baseurl>
+      <cover>
+         <image>vb2010htp.jpg</image>
+         <title>Visual Basic How To Program</title>
+      </cover>
+      <cover>
+         <image>vcsharp2010htp.jpg</image>
+         <title>Visual C# How To Program</title>
+      </cover>
+
+      <cover>
+         <image>simplyvb2008.jpg</image>
+         <title>Simply VB 2008</title>
+	</cover>
+</covers>

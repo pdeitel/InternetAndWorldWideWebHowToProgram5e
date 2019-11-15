@@ -1,0 +1,11 @@
+/* Fig. 12.17: style.css */
+/* CSS for coverviewer.html. */
+#thumbs   { width: 192px;
+            height: 370px;
+            padding: 5px;
+            float: left; }
+#mainimg  { width: 289px;
+            padding: 5px;
+            float: left; }
+#imgCover { height: 373px; }
+img       { border: 1px solid black; }

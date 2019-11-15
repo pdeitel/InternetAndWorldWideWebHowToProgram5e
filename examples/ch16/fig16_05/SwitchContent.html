@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!-- Fig. 16.5: SwitchContent.html -->
+<!-- Asynchronously display content without reloading the page. -->
+<html>
+<head>
+   <meta charset = "utf-8">
+   <style type = "text/css">
+      .box { border: 1px solid black; padding: 10px }
+   </style>
+   <title>Switch Content Asynchronously</title>
+   <script>
+      var asyncRequest; // variable to hold XMLHttpRequest object
+
+      // set up event handlers
+      function registerListeners()
+      {
+         var img;
+         img = document.getElementById( "cpphtp" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "cpphtp.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "iw3htp" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "iw3htp.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "jhtp" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "jhtp.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "vbhtp" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "vbhtp.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "vcshtp" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "vcshtp.html" ); }, false );
+         img.addEventListener( "mouseout", clearContent, false ); 
+         img = document.getElementById( "javafp" );
+         img.addEventListener( "mouseover", 
+            function() { getContent( "javafp.html" ); }, false ); 
+         img.addEventListener( "mouseout", clearContent, false ); 
+      } // end function registerListeners
+
+      // set up and send the asynchronous request.
+      function getContent( url )
+      {
+         // attempt to create XMLHttpRequest object and make the request
+         try
+         {
+            asyncRequest = new XMLHttpRequest(); // create request object
+
+            // register event handler
+            asyncRequest.addEventListener(
+               "readystatechange", stateChange, false); 
+            asyncRequest.open( "GET", url, true ); // prepare the request
+            asyncRequest.send( null ); // send the request
+         } // end try
+         catch ( exception )
+         {
+            alert( "Request failed." );
+         } // end catch
+      } // end function getContent
+      
+      // displays the response data on the page
+      function stateChange()
+      {
+         if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 )
+         {
+            document.getElementById( "contentArea" ).innerHTML = 
+               asyncRequest.responseText; // places text in contentArea
+         } // end if
+      } // end function stateChange
+
+      // clear the content of the box
+      function clearContent()
+      {
+         document.getElementById( "contentArea" ).innerHTML = "";
+      } // end function clearContent
+
+      window.addEventListener( "load", registerListeners, false );
+   </script>
+</head>
+<body>
+   <h1>Mouse over a book for more information.</h1>
+   <img id = "cpphtp" alt = "C++ How to Program book cover"
+      src = "http://test.deitel.com/images/thumbs/cpphtp8.jpg">
+   <img id = "iw3htp" alt = "Internet & WWW How to Program book cover"
+      src = "http://test.deitel.com/images/thumbs/iw3htp5.jpg">
+   <img id = "jhtp" alt = "Java How to Program book cover"
+      src = "http://test.deitel.com/images/thumbs/jhtp9.jpg">
+   <img id = "vbhtp" alt = "Visual Basic 2010 How to Program book cover"
+      src = "http://test.deitel.com/images/thumbs/vb2010htp.jpg">
+   <img id = "vcshtp" alt = "Visual C# 2010 How to Program book cover" 
+      src = "http://test.deitel.com/images/thumbs/vcsharp2010htp.jpg">
+   <img id = "javafp" alt = "Java for Programmers book cover"
+      src = "http://test.deitel.com/images/thumbs/javafp.jpg">
+   <div class = "box" id = "contentArea"></div>
+</body>
+</html>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

@@ -1,0 +1,9 @@
+/* CSS for onmouseoverout.html. */
+body  { background-color: wheat }
+div   { border-style: groove;
+        text-align: center;
+        font-family: monospace;
+        font-weight: bold;
+		width: 34em; }
+ul    { margin-left: -40px; }
+li    { display: inline-block; width: 8em; }

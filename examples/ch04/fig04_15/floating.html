@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!-- Fig. 4.15: floating.html -->
+<!-- Floating elements. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Flowing Text Around Floating Elements</title>
+      <style type = "text/css">
+         header   { background-color: SkyBlue;
+                    text-align: center;
+                    font-family: arial, helvetica, sans-serif;
+                    padding: .2em; }
+         p        { text-align: justify;
+                    font-family: verdana, geneva, sans-serif;
+                    margin: .5em; }
+         h1       { margin-top: 0px; }    
+         .floated { background-color: LightGrey;
+                    font-size: 1.5em;
+                    font-family: arial, helvetica, sans-serif;
+                    padding: .2em;
+                    margin-left: .5em;
+                    margin-bottom: .5em;
+                    float: right;
+                    text-align: right;
+                    width: 50%; }
+         section { border: 1px solid skyBlue; }
+      </style>
+   </head>
+   <body>
+      <header><img src = "deitel.png" alt = "Deitel" /></header>
+      <section>
+         <h1 class = "floated">Corporate Training and Authoring</h1>
+         <p>Deitel & Associates, Inc. is an internationally
+         recognized corporate training and authoring organization 
+         specializing in programming languages, Internet/web 
+         technology, iPhone and Android app development and  
+         object technology education. The company provides courses 
+         on Java, C++, C#, Visual Basic, C, Internet and web 
+         programming, Object Technology and iPhone and Android
+		   app development.</p>
+      </section>
+      <section>
+         <h1 class = "floated">Programming Books and Videos</h1>
+         <p>Through its publishing 
+         partnership with Pearson, Deitel & Associates, 
+         Inc. publishes leading-edge programming textbooks, 
+         professional books and interactive web-based and DVD 
+         LiveLessons video courses.</p>
+      </section>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

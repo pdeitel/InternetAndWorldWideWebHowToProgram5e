@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Fig. 2.11: list.html -->
+<!-- Nested lists and ordered lists. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Lists</title>
+   </head>
+
+   <body>
+      <h1>The Best Features of the Internet</h1>
+
+      <!-- create an unordered list -->
+      <ul>
+         <li>You can meet new people from countries around 
+            the world.</li>
+         <li>
+            You have access to new media as it becomes public:
+
+            <!-- this starts a nested unordered list, which uses a -->
+            <!-- different bullet. The list ends when you -->
+            <!-- close the <ul> tag. -->
+            <ul>
+               <li>New games</li>
+               <li>New applications
+
+                  <!-- nested ordered list -->
+                  <ol>
+                     <li>For business</li>
+                     <li>For pleasure</li>
+                  </ol>
+               </li> <!-- ends line 27 new applications li-->
+
+               <li>Around the clock news</li>
+               <li>Search engines</li>
+               <li>Shopping</li>
+               <li>Programming
+
+                  <!-- another nested ordered list -->
+                  <ol>
+                     <li>XML</li>
+                     <li>Java</li>
+                     <li>HTML5</li>
+                     <li>JavaScript</li>
+                     <li>New languages</li>
+                  </ol>
+               </li> <!-- ends programming li of line 38 -->
+            </ul> <!-- ends the nested list of line 24 -->
+         </li> 
+
+         <li>Links</li>
+         <li>Keeping in touch with old friends</li>
+         <li>It's the technology of the future!</li>
+      </ul> <!-- ends the unordered list of line 15 -->
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

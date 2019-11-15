@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WelcomeSOAPXMLService" CodeBehind="~/App_Code/WelcomeSOAPXMLService.cs" %>

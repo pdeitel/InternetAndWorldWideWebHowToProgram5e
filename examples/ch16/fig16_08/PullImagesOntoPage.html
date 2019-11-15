@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<!-- Fig. 16.8: PullImagesOntoPage.html -->
+<!-- Image catalog that uses Ajax to request XML data asynchronously. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title> Pulling Images onto the Page </title>
+<style type = "text/css">
+   li { display: inline-block; padding: 4px; width: 120px; }
+   img { border: 1px solid black }
+</style>
+<script>
+   var asyncRequest; // variable to hold XMLHttpRequest object
+
+   // set up and send the asynchronous request to get the XML file
+   function getImages( url )
+   {
+      // attempt to create XMLHttpRequest object and make the request
+      try
+      {
+         asyncRequest = new XMLHttpRequest(); // create request object
+
+         // register event handler
+         asyncRequest.addEventListener(
+            "readystatechange", processResponse, false); 
+         asyncRequest.open( "GET", url, true ); // prepare the request
+         asyncRequest.send( null ); // send the request
+      } // end try
+      catch ( exception )
+      {
+         alert( "Request Failed" );
+      } // end catch
+   } // end function getImages
+   
+   // parses the XML response; dynamically creates an undordered list and 
+   // populates it with the response data; displays the list on the page
+   function processResponse()
+   {
+      // if request completed successfully and responseXML is non-null
+      if ( asyncRequest.readyState == 4 && asyncRequest.status == 200 && 
+         asyncRequest.responseXML )
+      {
+         clearImages(); // prepare to display a new set of images
+
+         // get the covers from the responseXML
+         var covers = asyncRequest.responseXML.getElementsByTagName(
+            "cover" )
+
+         // get base URL for the images
+         var baseUrl = asyncRequest.responseXML.getElementsByTagName( 
+            "baseurl" ).item( 0 ).firstChild.nodeValue;
+         
+         // get the placeholder div element named covers
+         var output = document.getElementById( "covers" );
+         
+         // create an unordered list to display the images
+         var imagesUL = document.createElement( "ul" );
+         
+         // place images in unordered list
+         for ( var i = 0; i < covers.length; ++i )
+         {
+            var cover = covers.item( i ); // get a cover from covers array
+         
+            // get the image filename
+            var image = cover.getElementsByTagName( "image" ).
+               item( 0 ).firstChild.nodeValue;
+         
+            // create li and img element to display the image
+            var imageLI = document.createElement( "li" );
+            var imageTag = document.createElement( "img" );
+            
+            // set img element's src attribute
+            imageTag.setAttribute( "src", baseUrl + escape( image ) ); 
+            imageLI.appendChild( imageTag ); // place img in li
+            imagesUL.appendChild( imageLI ); // place li in ul
+         } // end for statement
+
+         output.appendChild( imagesUL ); // append ul to covers div
+      } // end if 
+   } // end function processResponse
+
+   // clears the covers div
+   function clearImages()
+   {
+      document.getElementById( "covers" ).innerHTML = ""; 
+   } // end function clearImages
+
+   // register event listeners
+   function registerListeners()
+   {
+      document.getElementById( "all" ).addEventListener(
+         "click", function() { getImages( "all.xml" ); }, false ); 
+      document.getElementById( "simply" ).addEventListener(
+         "click", function() { getImages( "simply.xml" ); }, false ); 
+      document.getElementById( "howto" ).addEventListener(
+         "click", function() { getImages( "howto.xml" ); }, false ); 
+      document.getElementById( "dotnet" ).addEventListener(
+         "click", function() { getImages( "dotnet.xml" ); }, false ); 
+      document.getElementById( "javaccpp" ).addEventListener(
+         "click", function() { getImages( "javaccpp.xml" ); }, false ); 
+      document.getElementById( "none" ).addEventListener(
+         "click", clearImages, false ); 
+   } // end function registerListeners
+
+   window.addEventListener( "load", registerListeners, false );
+   </script>
+</head>
+<body>
+   <input type = "radio" name ="Books" value = "all" 
+      id = "all"> All Books 
+   <input type = "radio" name = "Books" value = "simply" 
+      id = "simply"> Simply Books 
+   <input type = "radio" name = "Books" value = "howto" 
+      id = "howto"> How to Program Books 
+   <input type = "radio" name = "Books" value = "dotnet" 
+      id = "dotnet"> .NET Books 
+   <input type = "radio" name = "Books" value = "javaccpp"
+      id = "javaccpp"> Java/C/C++ Books
+   <input type = "radio" checked name = "Books" value = "none"
+      id = "none"> None 
+   <div id = "covers"></div>
+</body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

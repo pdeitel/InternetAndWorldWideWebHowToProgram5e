@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!-- Fig. 19.13: form.html --> 
+<!-- XHTML form for gathering user input. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Sample Form</title>
+      <style type = "text/css">
+         label  { width: 5em; float: left; }
+      </style>
+   </head>
+   <body>
+      <h1>Registration Form</h1>
+      <p>Please fill in all fields and click Register.</p>
+   
+      <!-- post form data to form.php -->
+      <form method = "post" action = "form.php">
+         <h2>User Information</h2>
+
+         <!-- create four text boxes for user input -->
+         <div><label>First name:</label> 
+            <input type = "text" name = "fname"></div>
+         <div><label>Last name:</label>
+            <input type = "text" name = "lname"></div>
+         <div><label>Email:</label>
+            <input type = "text" name = "email"></div>
+         <div><label>Phone:</label>
+            <input type = "text" name = "phone" 
+               placeholder = "(555) 555-5555"></div>
+         </div>
+
+         <h2>Publications</h2>
+         <p>Which book would you like information about?</p>
+
+         <!-- create drop-down list containing book names -->
+         <select name = "book">
+            <option>Internet and WWW How to Program</option>
+            <option>C++ How to Program</option>
+            <option>Java How to Program</option>
+            <option>Visual Basic How to Program</option>
+         </select>
+
+         <h2>Operating System</h2>
+         <p>Which operating system do you use?</p>
+
+         <!-- create five radio buttons -->
+         <p><input type = "radio" name = "os" value = "Windows"
+               checked>Windows
+            <input type = "radio" name = "os" value = "Mac OS X">Mac OS X
+            <input type = "radio" name = "os" value = "Linux">Linux
+            <input type = "radio" name = "os" value = "Other">Other</p>
+
+         <!-- create a submit button -->
+         <p><input type = "submit" name = "submit" value = "Register"></p>
+      </form>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

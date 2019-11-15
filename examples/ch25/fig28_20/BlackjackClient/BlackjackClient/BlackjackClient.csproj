@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{008D4838-655B-4605-B3F0-883241B3334A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlackjackClient</RootNamespace>
+    <AssemblyName>BlackjackClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blackjack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blackjack.Designer.cs">
+      <DependentUpon>Blackjack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Blackjack.resx">
+      <DependentUpon>Blackjack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServiceReference\BlackjackService.wsdl" />
+    <None Include="Service References\ServiceReference\Service.xsd" />
+    <None Include="Service References\ServiceReference\Service1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackjack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

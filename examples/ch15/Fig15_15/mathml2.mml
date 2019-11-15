@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE math PUBLIC "-//W3C//DTD MathML 2.0//EN"
+   "http://www.w3.org/TR/MathML2/dtd/mathml2.dtd">
+
+<!-- Fig. 15.15: mathml2.mml -->
+<!-- MathML algebraic equation. -->
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+   <mn>3</mn>
+   <mo>&InvisibleTimes;</mo>
+   <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+   </msup>
+   <mo>+</mo>
+   <mi>x</mi>
+   <mo>&minus;</mo>
+   <mfrac>
+      <mn>2</mn>
+      <mi>x</mi>
+   </mfrac>
+   <mo>=</mo>
+   <mn>0</mn>
+</math>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

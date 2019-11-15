@@ -1,0 +1,6 @@
+/* Fig. 13.7: style.css */
+/* CSS for onsubmitreset.html. */
+textarea    { width: 300px; height: 100px; }
+label.fixed { width: 4em; float: left; } 
+#helpText   { font-family: sans-serif; color: blue; margin-top: 10px; }
+p           { margin: 0; }

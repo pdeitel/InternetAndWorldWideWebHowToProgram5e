@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!-- Fig. 14.7: roundedrectangle.html -->
+<!-- Drawing a rounded rectangle on a canvas. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Quadratic Curves</title>
+   </head>
+   <body>
+      <canvas id = "drawRoundedRect" width = "130" height = "130" 
+         style = "border: 1px solid black;">
+      </canvas>
+      <script>
+         var canvas = document.getElementById("drawRoundedRect");
+         var context = canvas.getContext("2d")
+         context.beginPath();
+         context.moveTo(15, 5);
+         context.lineTo(95, 5);
+         context.quadraticCurveTo(105, 5, 105, 15);
+         context.lineTo(105, 95);
+         context.quadraticCurveTo(105, 105, 95, 105);
+         context.lineTo(15, 105);
+         context.quadraticCurveTo(5, 105, 5, 95);
+         context.lineTo(5, 15);
+         context.quadraticCurveTo(5, 5, 15, 5);
+         context.closePath();
+         context.fillStyle = "yellow";
+         context.fill(); //fill with the fillStyle color
+         context.strokeStyle = "royalblue";
+         context.lineWidth = 6;
+         context.stroke(); //draw 6-pixel royalblue border
+      </script>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

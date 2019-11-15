@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EquationGeneratorService" CodeBehind="~/App_Code/EquationGeneratorService.cs" %>

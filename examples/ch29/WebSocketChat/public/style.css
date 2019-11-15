@@ -1,0 +1,9 @@
+p { margin: 0; }
+div { border: 4px solid gray; margin: 10px 0 10px 0; padding: 5px; width: 400px; height: 200px; overflow: scroll; }
+li { width: 360px; padding: 3px; }
+li:nth-child(even) { background-color: lightyellow; }
+li:nth-child(odd) { background-color: lightblue; }
+ul { list-style-type: none; margin: 0 0 0 -35px; }
+span.screenName { font-weight: bold; }
+#messageToSend { width: 360px; }
+#sendButton { vertical-align: top; }

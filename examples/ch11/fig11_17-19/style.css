@@ -1,0 +1,12 @@
+﻿p { margin: 0px; }
+#welcomeMessage { margin-bottom: 10px; font-weight: bold; }
+input[type = "text"] { width: 250px; }
+
+/* list item styles */
+span { margin-left: 10px; display: inline-block; width: 100px; }
+li { list-style-type: none; width: 220px;}
+li:first-child { border-top: 1px solid grey; }
+li:nth-child(even) { background-color: lightyellow;
+   border-bottom: 1px solid grey; }
+li:nth-child(odd) { background-color: lightblue; 
+   border-bottom: 1px solid grey; }

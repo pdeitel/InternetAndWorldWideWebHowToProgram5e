@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Equation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="LeftHandSide" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="Right" type="xs:int" />
+      <xs:element minOccurs="0" name="RightHandSide" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Equation" nillable="true" type="tns:Equation" />
+</xs:schema>

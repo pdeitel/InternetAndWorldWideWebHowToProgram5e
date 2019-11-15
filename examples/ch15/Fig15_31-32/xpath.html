@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- Fig. 15.33: xpath.html -->
+<!-- Using XPath to locate nodes in an XML document. -->
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Using XPath to Locate Nodes in an XML Document</title>
+   <style type = "text/css">
+      #outputDiv { font:10pt "Lucida Console", monospace; }
+   </style>
+   <script type = "text/javascript">
+   <!--
+   var doc; // variable to reference the XML document
+   var outputHTML = ""; // stores text to output in outputDiv
+   var browser = ""; // used to determine which browser is being used
+
+   // load XML document based on whether the browser is IE7 or Firefox 2
+   function loadXMLDocument( url )
+   {
+      if ( window.ActiveXObject ) // IE7
+      {
+         // create IE7-specific XML document object
+         doc = new ActiveXObject( "Msxml2.DOMDocument.6.0" );
+         doc.async = false; // specifies synchronous loading of XML doc
+         doc.load( url ); // load the XML document specified by url
+         browser = "IE7"; // set browser 
+      } // end if
+      else if ( document.implementation && 
+         document.implementation.createDocument ) // other browsers
+      {
+         // create XML document object
+         doc = document.implementation.createDocument( "", "", null );
+         doc.load( url ); // load the XML document specified by url
+         browser = "FF2"; // set browser 
+      } // end else
+      else // not supported
+         alert( 'This script is not supported by your browser' );
+   } // end function loadXMLDocument
+
+   // display the XML document 
+   function displayDoc()
+   {
+      document.getElementById( "outputDiv" ).innerHTML = outputHTML;
+   } // end function displayDoc
+
+   // obtain and apply XPath expression
+   function processXPathExpression()
+   {
+      var xpathExpression = document.getElementById( "inputField" ).value;
+      outputHTML = "";
+
+      if ( browser == "IE7" )
+      {
+         var result = doc.selectNodes( xpathExpression );
+
+         for ( var i = 0; i < result.length; i++ )
+            outputHTML += "<div style='clear: both'>" + 
+               result.item( i ).text + "</div>";
+      } // end if
+      else // browser == "FF2"
+      {
+         var result = document.evaluate( xpathExpression, doc, null, 
+            XPathResult.ANY_TYPE, null );
+         var current = result.iterateNext();
+
+         while ( current ) 
+         {
+            outputHTML += "<div style='clear: both'>" + 
+               current.textContent + "</div>";
+            current = result.iterateNext();
+         } // end while
+      } // end else
+
+      displayDoc();
+   } // end function processXPathExpression
+   // -->
+   </script>
+</head>
+<body id = "body" onload = "loadXMLDocument( 'sports.xml' );">
+   <form action = "" onsubmit = "return false;">
+      <input id = "inputField" type = "text" style = "width: 200px"/>
+      <input type = "submit" value = "Get Matches" 
+         onclick = "processXPathExpression()"/>
+   </form><br/>
+   <div id = "outputDiv"></div>
+</body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->
+

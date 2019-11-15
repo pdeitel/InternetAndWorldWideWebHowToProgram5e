@@ -1,0 +1,15 @@
+/* Fig. 12.12: style.css */
+/* CSS for collections.html. */
+body           { font-family: arial, helvetica, sans-serif; }
+h1             { font-family: tahoma, geneva, sans-serif;
+                 text-align: center; }
+p a            { color: DarkRed; }
+ul             { font-size: .9em; }
+li             {  display: inline;
+                 list-style-type: none; 
+                 border-right: 1px solid gray;
+				 padding-left: 5px; padding-right: 5px; }
+li:first-child { padding-left: 0px; }
+li:last-child  { border-right: none; }
+a              { text-decoration: none; }
+a:hover        { text-decoration: underline; }

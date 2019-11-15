@@ -1,0 +1,20 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/</baseurl>
+  	  <cover>
+        <image>cpphtp8.jpg</image>
+        <title>C++ How to Program</title>
+      </cover>
+	  <cover>
+        <image>jhtp9.jpg</image>
+        <title>Java How to Program</title>
+      </cover>
+	  <cover>
+        <image>simplycpp.jpg</image>
+        <title>Simply C++</title>
+      </cover>
+	  <cover>
+		<image>simplyjava.jpg</image>
+        <title>Simply Java</title>
+      </cover>
+  </covers>

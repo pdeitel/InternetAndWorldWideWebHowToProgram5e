@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTutorXML", "MathTutorXML\MathTutorXML.csproj", "{538B7DB9-661E-4D88-A9C7-AB912FAAD252}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{538B7DB9-661E-4D88-A9C7-AB912FAAD252}.Debug|x86.ActiveCfg = Debug|x86
+		{538B7DB9-661E-4D88-A9C7-AB912FAAD252}.Debug|x86.Build.0 = Debug|x86
+		{538B7DB9-661E-4D88-A9C7-AB912FAAD252}.Release|x86.ActiveCfg = Release|x86
+		{538B7DB9-661E-4D88-A9C7-AB912FAAD252}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

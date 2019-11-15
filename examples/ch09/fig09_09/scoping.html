@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.9: scoping.html -->
+<!-- Scoping example. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Scoping Example</title>
+      <style type = "text/css">
+         p       { margin: 0px; }
+         p.space { margin-top: 10px; }
+      </style>
+      <script>
+         var output; // stores the string to display
+         var x = 1; // global variable
+
+         function start()
+         {
+            var x = 5; // variable local to function start
+
+            output = "<p>local x in start is " + x + "</p>";
+
+            functionA(); // functionA has local x
+            functionB(); // functionB uses global variable x
+            functionA(); // functionA reinitializes local x
+            functionB(); // global variable x retains its value
+
+            output += "<p class='space'>local x in start is " + x + 
+               "</p>";
+            document.getElementById( "results" ).innerHTML = output;
+         } // end function start
+
+         function functionA()
+         {
+            var x = 25; // initialized each time functionA is called
+
+            output += "<p class='space'>local x in functionA is " + x +
+               " after entering functionA</p>";
+            ++x;
+            output += "<p>local x in functionA is " + x +
+               " before exiting functionA</p>";
+         } // end functionA
+
+         function functionB()
+         {
+            output += "<p class='space'>global variable x is " + x +
+               " on entering functionB";
+            x *= 10;
+            output += "<p>global variable x is " + x + 
+               " on exiting functionB</p>";
+         } // end functionB
+
+         window.addEventListener( "load", start, false );
+      </script>
+   </head>
+   <body onload = "start()">
+      <div id = "results"></div>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Books" Class="BooksDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Books.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BooksConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AuthorISBN" Member="AuthorISBNs">
+    <Type Name="AuthorISBN">
+      <Column Name="AuthorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ISBN" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Title_AuthorISBN" Member="Title" ThisKey="ISBN" OtherKey="ISBN" Type="Title" IsForeignKey="true" />
+      <Association Name="Author_AuthorISBN" Member="Author" ThisKey="AuthorID" OtherKey="AuthorID" Type="Author" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Titles" Member="Titles">
+    <Type Name="Title">
+      <Column Name="ISBN" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Member="Title1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EditionNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Copyright" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="Title_AuthorISBN" Member="AuthorISBNs" ThisKey="ISBN" OtherKey="ISBN" Type="AuthorISBN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Authors" Member="Authors">
+    <Type Name="Author">
+      <Column Name="AuthorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Author_AuthorISBN" Member="AuthorISBNs" ThisKey="AuthorID" OtherKey="AuthorID" Type="AuthorISBN" />
+    </Type>
+  </Table>
+</Database>

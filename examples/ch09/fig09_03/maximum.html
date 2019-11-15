@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.3: maximum.html -->
+<!-- Programmer-Defined maximum function. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Maximum of Three Values</title>
+      <style type = "text/css">
+         p { margin: 0; }
+      </style>
+      <script>
+
+         var input1 = window.prompt( "Enter first number", "0" );
+         var input2 = window.prompt( "Enter second number", "0" );
+         var input3 = window.prompt( "Enter third number", "0" ); 
+   
+         var value1 = parseFloat( input1 );
+         var value2 = parseFloat( input2 );
+         var value3 = parseFloat( input3 );
+   
+         var maxValue = maximum( value1, value2, value3 );
+
+         document.writeln( "<p>First number: " + value1 + "</p>" +
+            "<p>Second number: " + value2 + "</p>" +
+            "<p>Third number: " + value3 + "</p>" +
+            "<p>Maximum is: " + maxValue + "</p>" );
+
+         // maximum function definition (called from line 22)
+         function maximum( x, y, z )               
+         {                                         
+            return Math.max( x, Math.max( y, z ) );
+         } // end function maximum                                         
+
+      </script>
+   </head><body></body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

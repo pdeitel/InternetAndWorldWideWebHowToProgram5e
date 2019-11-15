@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- fibonacciworker.html -->
+<!-- Fibonacci calculations with Web Workers. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Long Running Fibonacci Calulation</title>
+      <link rel = "stylesheet" type = "text/css" href = "style.css">
+      <script src = "fibonacci.js"></script>
+   </head>
+   <body>
+      <form id = "myForm" action = "">
+         <div>
+            <p class = "head">Fibonacci with Recursion</p>
+            <p>Get Fibonacci of: 
+               <input id = "computeValue" type = "number" value = "1">
+            </p>
+            <p>
+               <input id = "getSpecificFibonacciButton" type = "button" 
+                  value = "Get Specific Fibonacci">
+               <input id = "cancelButton" type = "button" 
+                  value = "Cancel">
+            </p>
+            <p id = "recursiveFibonacciResult"></p>      
+         </div>
+         <div>
+            <p class = "head">Fibonacci without Recursion</p>
+            <p id = "nextFibonacciResult"></p>
+            <p>
+               <input id = "getNextFibonacciButton" type = "button" 
+                  value = "Get Next Fibonacci">
+            </p>
+         </div>
+      </form>
+   </body>
+</html>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

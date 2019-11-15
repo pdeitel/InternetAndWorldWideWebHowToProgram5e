@@ -1,0 +1,4 @@
+table  { border: 1px solid black; border-collapse: collapse; 
+         background-color: wheat; padding: 3px; }
+td, th { border: 1px solid gray; padding: 3px; }
+tbody > tr:nth-child(odd) { background-color: white; }

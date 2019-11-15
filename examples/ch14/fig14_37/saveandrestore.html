@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- Fig. 14.37: saveandrestore.html -->
+<!-- Saving the current state and restoring the previous state. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Save and Restore</title>
+   </head>
+   <body>
+      <canvas id = "save" width = "400" height = "200">
+      </canvas>
+      <script>
+         function draw() 
+         {
+            var canvas = document.getElementById("save");
+            var context = canvas.getContext("2d")
+            
+            // draw rectangle and save the settings
+            context.fillStyle = "red"     
+            context.fillRect(0, 0, 400, 200);   
+            context.save();    
+            
+            // change the settings and save again  
+            context.fillStyle = "orange"      
+            context.fillRect(0, 40, 400, 160); 
+            context.save();                   
+  
+            // change the settings again  
+            context.fillStyle = "yellow"  
+            context.fillRect(0, 80, 400, 120);   
+  
+            // restore to previous settings and draw new rectangle  
+            context.restore();  
+            context.fillRect(0, 120, 400, 80);   
+  
+            // restore to original settings and draw new rectangle  
+            context.restore();               
+            context.fillRect(0, 160, 400, 40);   
+         }
+         window.addEventListener( "load", draw, false );
+      </script>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2012 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

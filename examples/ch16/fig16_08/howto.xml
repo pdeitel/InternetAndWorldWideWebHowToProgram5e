@@ -1,0 +1,24 @@
+<?xml version = "1.0"?>
+  <covers>
+      <baseurl>http://test.deitel.com/images/thumbs/</baseurl>
+  	  <cover>
+         <image>cpphtp8.jpg</image>
+         <title>C++ How to Program</title>
+      </cover>
+      <cover>
+         <image>iw3htp5.jpg</image>
+         <title>Internet How to Program</title>
+      </cover>
+      <cover>
+         <image>jhtp9.jpg</image>
+         <title>Java How to Program</title>
+      </cover>
+      <cover>
+         <image>vb2010htp.jpg</image>
+         <title>Visual Basic How To Program</title>
+      </cover>
+      <cover>
+         <image>vcsharp2010htp.jpg</image>
+         <title>Visual C# How To Program</title>
+      </cover>
+  </covers>
